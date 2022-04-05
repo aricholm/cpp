@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 12:23:56 by aricholm          #+#    #+#             */
-/*   Updated: 2022/03/31 12:09:42 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/04/05 09:35:46 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,14 +114,14 @@ void	Account::displayStatus( void ) const
 
 void	Account::_displayTimestamp( void )
 {
-/*	std::time_t now = std::time(NULL);
+	std::time_t now = std::time(NULL);
 	std::tm * ptm = std::localtime(&now);
 	char buffer[19];
 	std::strftime(buffer, 19, "[%Y%m%d_%H%M%S] ", ptm);
-	std::cout << buffer;*/
+	std::cout << buffer;
 
 	// for testing
-	std::cout << "[19920104_091532] ";
+//	std::cout << "[19920104_091532] ";
 }
 
 Account::Account( void ) {}
