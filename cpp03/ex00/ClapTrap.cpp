@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 15:46:06 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/23 19:15:59 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/04/24 07:40:24 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ClapTrap::ClapTrap(const std::string name) : _name(name), _hp(10), _ep(10), _dmg
 			<<"but my friends call me "  << _name <<  "!"  << std::endl;
 }
 
-ClapTrap::~ClapTrap( ){	std::cout << _name << " is dead." << std::endl; }
+ClapTrap::~ClapTrap( ){	std::cout << _name << " is deconstructed." << std::endl; }
 
 ClapTrap& ClapTrap::operator= (const ClapTrap& claptrap)
 {
@@ -52,7 +52,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (_hp <= 0)
 	{
-		std::cout  << _name << " is deconstructed." << std::cout;
+		std::cout  << _name << " is already dead." << std::endl;
 		return;
 	}
 	_hp -= amount;
