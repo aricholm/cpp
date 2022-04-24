@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/24 07:58:19 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/24 09:48:45 by aricholm         ###   ########.fr       */
+/*   Created: 2022/04/24 08:30:38 by aricholm          #+#    #+#             */
+/*   Updated: 2022/04/24 08:55:14 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#include "FragTrap.hpp"
 
-#include "ClapTrap.hpp"
-
-class ScavTrap : public ClapTrap
+int main()
 {
-private:
-				ScavTrap();
-				ScavTrap(const ScavTrap& scavtrap);
-	ScavTrap&	operator= (const ScavTrap& scavtrap);	
-public:
-				ScavTrap(const std::string name);
-				~ScavTrap();
-	void		guardGate();
-};
+	FragTrap beni("Benedek");
 
-#endif
+	beni.attack("Aladár");
+	beni.takeDamage(42);
+	beni.beRepaired(21);
+	beni.highFiveGuys();
+
+
+	return 0;
+}
