@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/24 09:45:07 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/24 10:01:18 by aricholm         ###   ########.fr       */
+/*   Created: 2022/04/24 09:50:37 by aricholm          #+#    #+#             */
+/*   Updated: 2022/04/25 17:45:57 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DIAMONDTRAP_HPP
-#define DIAMONDTRAP_HPP
+#include "DiamondTrap.hpp"
 
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
-
-class DiamondTrap : public ScavTrap, public FragTrap
+DiamondTrap::DiamondTrap(const std::string& name)
 {
-private:
-					DiamondTrap();
-	DiamondTrap&	operator=(const DiamondTrap& diamondtrap);
-	std::string		_name;
-public:
-					DiamondTrap(const std::string& name);
-					~DiamondTrap();
-	void			whoAmI() const;
-};
+	ClapTrap::_name = name + "_clap_name";
+}
 
-
-
-#endif
+DiamondTrap::~DiamondTrap()
+{
+	std::cout << _name << " wasn't forever." << std::endl;
+}
