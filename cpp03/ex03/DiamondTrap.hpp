@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 09:45:07 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/24 10:01:18 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/04/25 17:55:05 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ public:
 	void			whoAmI() const;
 };
 
-
+std::ostream&	operator<< (std::ostream& o, const DiamondTrap& claptrap);
 
 #endif

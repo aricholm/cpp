@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 08:41:05 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/24 09:46:04 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/04/25 17:55:15 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ public:
 void	highFiveGuys();
 };
 
+std::ostream&	operator<< (std::ostream& o, const FragTrap& claptrap);
 #endif

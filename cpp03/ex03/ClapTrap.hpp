@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 15:46:23 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/24 08:18:54 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/04/25 17:51:18 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ public:
 	void			beRepaired(unsigned int amount);
 };
 
-
-
+std::ostream&	operator<< (std::ostream& o, const ClapTrap& claptrap);
 
 #endif // CLAPTRAP_HPP

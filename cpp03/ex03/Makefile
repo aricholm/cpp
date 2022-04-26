@@ -6,12 +6,12 @@
 #    By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/17 11:55:02 by aricholm          #+#    #+#              #
-#    Updated: 2022/04/24 09:44:55 by aricholm         ###   ########.fr        #
+#    Updated: 2022/04/26 15:08:19 by aricholm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	diamondtrap
-SRC		=	main.cpp ClapTrap.cpp ScavTrap.cpp DiamondTrap.cpp
+SRC		=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJ		=	$(SRC:%.cpp=%.o)
 
 CC		=	c++

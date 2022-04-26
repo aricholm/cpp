@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 08:41:05 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/24 09:48:04 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/04/26 15:04:05 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class FragTrap : public ClapTrap
 private:
 		FragTrap();
 		FragTrap(const FragTrap& fragtrap);
+FragTrap&	operator= (const FragTrap& scavtrap);	
 public:
 		FragTrap(const std::string name);
 		~FragTrap();

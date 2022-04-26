@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 07:58:19 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/24 09:46:51 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/04/25 17:55:29 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ public:
 				~ScavTrap();
 	void		guardGate();
 };
+
+std::ostream&	operator<< (std::ostream& o, const ScavTrap& claptrap);
 
 #endif
