@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 18:55:32 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/15 11:18:38 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/05/10 16:39:27 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,8 @@ Fixed	Fixed::operator* (const Fixed& fixed) const
 {
 	if (verbose)
 		std::cout << "Multiply operator called" << std::endl;
-	Fixed out(this->toFloat() * fixed.toFloat());
+	Fixed out;
+	out.setRawBits(this->_value * fixed.getRawBits() >> _point);
 	return (out);
 }
 
@@ -95,7 +96,8 @@ Fixed	Fixed::operator/ (const Fixed& fixed) const
 {
 	if (verbose)
 		std::cout << "Divide operator called" << std::endl;
-	Fixed out(this->toFloat() / fixed.toFloat());
+	Fixed out;
+	out.setRawBits((this->_value << _point) / fixed.getRawBits());
 	return (out);
 }
 

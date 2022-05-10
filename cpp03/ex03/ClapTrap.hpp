@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 15:46:23 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/25 17:51:18 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/04/29 15:38:59 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,12 @@
 class ClapTrap
 {
 private:
-
-					ClapTrap();
 protected:
 					ClapTrap(	const std::string name,
 								const int hp,
 								const int ep,
 								const int dmg);
+					ClapTrap();
 	std::string		_name;
 	int				_hp;
 	int				_ep;

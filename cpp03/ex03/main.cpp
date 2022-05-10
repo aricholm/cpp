@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 08:30:38 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/25 17:57:53 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/04/28 12:47:32 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 
 int main()
-{
+{/*
 	ClapTrap sanyi("Sándor");
 
 	sanyi.attack("Ádám");	//ep 9
@@ -49,7 +49,10 @@ int main()
 	beni.takeDamage(42);
 	beni.beRepaired(21);
 	beni.highFiveGuys();
+*/
+	DiamondTrap dina("Diána");
 
-
+	dina.attack("anyád");
+	dina.whoAmI();
 	return 0;
 }
