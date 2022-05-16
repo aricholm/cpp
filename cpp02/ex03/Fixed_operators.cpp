@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 18:55:32 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/10 16:39:27 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/05/16 11:28:57 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,42 +25,42 @@ bool	Fixed::operator> (const Fixed& fixed) const
 {
 	if (verbose)
 		std::cout << "Greater than operator called" << std::endl;
-	return (this->_value > fixed.getRawBits() ? true : false);
+	return (this->_value > fixed.getRawBits());
 }
 
 bool	Fixed::operator< (const Fixed& fixed) const
 {
 	if (verbose)
 		std::cout << "Less than operator called" << std::endl;
-	return (this->_value < fixed.getRawBits() ? true : false);
+	return (this->_value < fixed.getRawBits());
 }
 
 bool	Fixed::operator>= (const Fixed& fixed) const
 {
 	if (verbose)
 		std::cout << "Greater than or equal operator called" << std::endl;
-	return (this->_value >= fixed.getRawBits() ? true : false);
+	return (this->_value >= fixed.getRawBits());
 }
 
 bool	Fixed::operator<= (const Fixed& fixed) const
 {
 	if (verbose)
 		std::cout << "Less than or equal operator called" << std::endl;
-	return (this->_value <= fixed.getRawBits() ? true : false);
+	return (this->_value <= fixed.getRawBits());
 }
 
 bool	Fixed::operator== (const Fixed& fixed) const
 {
 	if (verbose)
 		std::cout << "Equal operator called" << std::endl;
-	return (this->_value == fixed.getRawBits() ? true : false);
+	return (this->_value == fixed.getRawBits());
 }
 
 bool	Fixed::operator!= (const Fixed& fixed) const
 {
 	if (verbose)
 		std::cout << "Not equal operator called" << std::endl;
-	return (this->_value != fixed.getRawBits() ? true : false);
+	return (this->_value != fixed.getRawBits());
 }
 
 //ARITHMETIC OPERATORS
