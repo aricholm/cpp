@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 12:37:39 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/18 13:26:30 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/05/18 13:53:20 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Dog::Dog() : Animal("Dog")
+Dog::Dog() : AAnimal("Dog")
 {
 	_brain = new Brain;
 	std::cout << "Dog constructor" << std::endl;
 }
 
-Dog::Dog( const Dog & src ): Animal(src.getType())
+Dog::Dog( const Dog & src ): AAnimal(src.getType())
 {
 	_brain = src._brain;
 	std::cout << "Dog copy constructor" << std::endl;

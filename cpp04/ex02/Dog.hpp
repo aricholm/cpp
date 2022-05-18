@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 12:46:13 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/18 13:42:55 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/05/18 13:53:09 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string>
 # include "AAnimal.hpp"
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
 
 	public:
@@ -25,7 +25,7 @@ class Dog : public Animal
 		Dog();
 		Dog( Dog const & src );
 		~Dog();
-		using	Animal::operator=;
+		using	AAnimal::operator=;
 
 		virtual void	makeSound( void ) const ;
 	private:

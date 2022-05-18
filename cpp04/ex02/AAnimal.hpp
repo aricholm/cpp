@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 13:39:41 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/18 13:45:43 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/05/18 13:49:30 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 #include <iostream>
 #include "Brain.hpp"
 
-class Animal
+class AAnimal
 {
 public:
-					Animal();
-					Animal(const std::string type);
-	virtual			~Animal();
-					Animal(const Animal& ref);
-	Animal&			operator=(const Animal& ref);
+					AAnimal();
+					AAnimal(const std::string type);
+	virtual			~AAnimal();
+					AAnimal(const AAnimal& ref);
+	AAnimal&			operator=(const AAnimal& ref);
 
 	virtual void	makeSound() const = 0;
 	std::string		getType() const;

@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 12:00:17 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/18 13:38:05 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/05/18 13:53:34 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int	main( void )
 {
-	Animal	*animals[NUMBER_OF_ANIMALS];
+	AAnimal	*animals[NUMBER_OF_ANIMALS];
 	for (int i = 0; i < NUMBER_OF_ANIMALS; i++)
 	{
 		if (i % 2)
