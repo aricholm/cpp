@@ -6,12 +6,12 @@
 #    By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/17 11:55:02 by aricholm          #+#    #+#              #
-#    Updated: 2022/05/16 13:34:49 by aricholm         ###   ########.fr        #
+#    Updated: 2022/05/18 13:43:22 by aricholm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	animal00
-SRC		=	main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
+NAME	=	animal02
+SRC		=	main.cpp AAnimal.cpp Dog.cpp Cat.cpp Brain.cpp
 OBJ		=	$(SRC:%.cpp=%.o)
 
 CC		=	c++

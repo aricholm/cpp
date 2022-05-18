@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 09:45:07 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/10 16:13:10 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/05/11 16:43:39 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-class DiamondTrap : public ScavTrap, public FragTrap
+class DiamondTrap : public FragTrap, public ScavTrap
 {
 private:
 					DiamondTrap();
@@ -24,16 +24,17 @@ private:
 	std::string		_name;
 
 public:
-					DiamondTrap(const std::string& name);
-					~DiamondTrap();
-	void			whoAmI() const;
 	using			FragTrap::_hp;			
 	using			ScavTrap::_ep;			
 	using			FragTrap::_dmg;	
 	
+					DiamondTrap(const std::string& name);
+					~DiamondTrap();
+	void			whoAmI() const;
+
 	using			ScavTrap::attack;
 };
 
 std::ostream&	operator<< (std::ostream& o, const DiamondTrap& claptrap);
 
-#endif
+#endif /* DIAMONDTRAP_HPP */

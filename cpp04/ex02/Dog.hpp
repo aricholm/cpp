@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/24 08:41:05 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/16 11:38:08 by aricholm         ###   ########.fr       */
+/*   Created: 2022/05/16 12:46:13 by aricholm          #+#    #+#             */
+/*   Updated: 2022/05/18 13:42:55 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
-#include "ClapTrap.hpp"
+# include <iostream>
+# include <string>
+# include "AAnimal.hpp"
 
-class FragTrap : virtual public ClapTrap
+class Dog : public Animal
 {
-private:
-			FragTrap(const FragTrap& fragtrap);
-FragTrap& 	operator = (const FragTrap& ref);
-protected:
-			FragTrap();
-public:
-			FragTrap(const std::string name);
-			~FragTrap();
 
-void		highFiveGuys();
+	public:
+
+		Dog();
+		Dog( Dog const & src );
+		~Dog();
+		using	Animal::operator=;
+
+		virtual void	makeSound( void ) const ;
+	private:
+
 };
 
-std::ostream&	operator<< (std::ostream& o, const FragTrap& claptrap);
-#endif
+std::ostream &			operator<<( std::ostream & o, Dog const & i );
+
+#endif /* DOG_HPP */

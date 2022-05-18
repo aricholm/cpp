@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 13:39:59 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/18 13:40:01 by aricholm         ###   ########.fr       */
+/*   Created: 2022/05/16 12:37:39 by aricholm          #+#    #+#             */
+/*   Updated: 2022/05/18 13:26:30 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
+#include "Dog.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Brain::Brain(): count(0)
+Dog::Dog() : Animal("Dog")
 {
-	std::cout << "Brain constructor" << std::endl;
-
+	_brain = new Brain;
+	std::cout << "Dog constructor" << std::endl;
 }
 
-Brain::Brain( const Brain & src )
+Dog::Dog( const Dog & src ): Animal(src.getType())
 {
-	std::cout << "Brain copystructor" << std::endl;
-	*this = src;
+	_brain = src._brain;
+	std::cout << "Dog copy constructor" << std::endl;
 }
 
 
@@ -33,9 +33,10 @@ Brain::Brain( const Brain & src )
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-Brain::~Brain()
+Dog::~Dog()
 {
-	std::cout << "Brain destructor" << std::endl;
+	delete _brain;
+	std::cout << "Dog destructor" << std::endl;
 }
 
 
@@ -43,20 +44,9 @@ Brain::~Brain()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Brain &				Brain::operator=( Brain const & rhs )
+std::ostream &			operator<<( std::ostream & o, Dog const & i )
 {
-	if ( this != &rhs )
-	{
-		for (size_t i = 0; i < 100; i++)
-			ideas[i] = rhs.ideas[i];
-		count = rhs.count;
-	}
-	return *this;
-}
-
-std::ostream &			operator<<( std::ostream & o, Brain const &)
-{
-	//o << "Value = " << i.getValue();
+	o << i.getType();
 	return o;
 }
 
@@ -64,21 +54,15 @@ std::ostream &			operator<<( std::ostream & o, Brain const &)
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
-void	Brain::addIdea(const std::string idea)
-{
-	ideas[count++] = idea;
-}
 
-void	Brain::printIdeas() const
+void	Dog::makeSound() const
 {
-	for (size_t i = 0; i < count; i++)
-	{
-		std::cout << ideas[i] << "\n";
-	}
+	std::cout << "Woof" << std::endl;
 }
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
 */
+
 
 /* ************************************************************************** */

@@ -6,7 +6,7 @@
 #    By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/17 11:55:02 by aricholm          #+#    #+#              #
-#    Updated: 2022/04/29 15:31:21 by aricholm         ###   ########.fr        #
+#    Updated: 2022/05/16 11:31:40 by aricholm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ NAME	=	diamondtrap
 SRC		=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJ		=	$(SRC:%.cpp=%.o)
 
-CC		=	c++
+CC		=	clang++
 CFLAGS 	=	-Wextra -Werror -Wall
-XFLAG	=	-std=c++98
+XFLAG	=	-std=c++98 -pedantic
 
 all: $(NAME)
 

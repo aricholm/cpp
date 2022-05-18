@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 13:39:49 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/18 13:39:52 by aricholm         ###   ########.fr       */
+/*   Created: 2022/05/18 13:39:41 by aricholm          #+#    #+#             */
+/*   Updated: 2022/05/18 13:45:43 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef AANIMAL_HPP
+#define AANIMAL_HPP
 
 #include <iostream>
 #include "Brain.hpp"
@@ -25,7 +25,7 @@ public:
 					Animal(const Animal& ref);
 	Animal&			operator=(const Animal& ref);
 
-	virtual void	makeSound() const;
+	virtual void	makeSound() const = 0;
 	std::string		getType() const;
 	Brain*			getBrain() const;
 	void			think(const std::string idea);
@@ -37,5 +37,4 @@ private:
 	
 };
 
-
-#endif /* ANIMAL_HPP */
+#endif /* AANIMAL_HPP */
