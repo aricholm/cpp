@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 07:58:19 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/24 09:48:45 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/08/17 15:47:12 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ public:
 				ScavTrap(const std::string name);
 				~ScavTrap();
 	void		guardGate();
+	void		attack(const std::string& target);
 };
 
 #endif

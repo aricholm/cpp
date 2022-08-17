@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 15:46:06 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/10 20:21:03 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/08/17 15:36:45 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ std::ostream&	operator<<(std::ostream& o, const ClapTrap& claptrap)
 	return (o);
 }
 
-ClapTrap::ClapTrap() : _name("CL4P-TP"), _hp(10), _ep(10), _dmg(0)
+ClapTrap::ClapTrap() : _name("CL4P-TP"), _hp(_defaulthp), _ep(_defaultep), _dmg(_defaultdmg)
 {
-	std::cout << "Default constructor called, this shouldn't be possible." << std::endl;
+	std::cout << "[ClapTrap] Default constructor called." << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string name) : _name(name), _hp(10), _ep(10), _dmg(0)
+ClapTrap::ClapTrap(const std::string name) : _name(name), _hp(_defaulthp), _ep(_defaultep), _dmg(_defaultdmg)
 {
 	std::cout << "Allow me to introduce myself -- I am CL4T-TP steward bot, "
 			<<"but my friends call me "  << _name <<  "!"  << std::endl;
@@ -42,8 +42,10 @@ ClapTrap& ClapTrap::operator= (const ClapTrap& claptrap)
 	_name = claptrap.getName();
 	return *this;
 }
+
 std::string ClapTrap::getName() const
 { return _name; }
+
 void	ClapTrap::attack(const std::string& target)
 {
 	if (_hp <= 0)

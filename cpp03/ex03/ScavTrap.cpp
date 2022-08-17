@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 08:03:45 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/11 16:45:52 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/08/17 15:33:44 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,12 @@ std::ostream&	operator<<(std::ostream& o, const ScavTrap& claptrap)
 	return (o);
 }
 
-ScavTrap::ScavTrap(const std::string name) : ClapTrap(name, 100, 50, 20)
+ScavTrap::ScavTrap(const std::string name) : ClapTrap(name, _defaulthp, _defaultep, _defaultdmg)
 {
-	//_name = name; _hp = 100; _ep = 50; _dmg = 20;
 	std::cout << *this << " is ready to scavenge Pandora!" << std::endl;
-///////////////////////////////////////////////
-std::cout << "HP: " << _hp << " EP: " << _ep << " DMG: " << _dmg << std::endl;
-
 }
 
-ScavTrap::ScavTrap() : ClapTrap("Default ScavTrap", 100, 50, 20)
+ScavTrap::ScavTrap() : ClapTrap("Default ScavTrap", _defaulthp, _defaultep, _defaultdmg)
  {
  std::cout << "Default ScavTrap constructor."<< std::endl;
  }

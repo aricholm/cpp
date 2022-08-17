@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 12:00:17 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/18 13:53:34 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/05/18 14:11:44 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,20 @@
 
 int	main( void )
 {
-	AAnimal	*animals[NUMBER_OF_ANIMALS];
-	for (int i = 0; i < NUMBER_OF_ANIMALS; i++)
-	{
-		if (i % 2)
-			animals[i] = new Dog();
-		else
-			animals[i] = new Cat();
-		std::cout << animals[i]->getType() << std::endl;
+	{	
+//		const AAnimal* meta = new AAnimal();
+		const AAnimal* j = new Dog();
+		const AAnimal* i = new Cat();
+
+		std::cout << j->getType() << " " << std::endl;
+		std::cout << i->getType() << " " << std::endl;
+		i->makeSound(); //will output the cat sound!
+		j->makeSound();
+	//	meta->makeSound();
+
+	//	delete meta;
+		delete i;
+		delete j;
+		std::cout << std::endl;
 	}
-	animals[7]->think("I'm thinking");
-	animals[7]->think("I'm having a great idea");
-	animals[7]->think("Brain");
-	animals[7]->think("Brian");
-	std::cout << "\nFirst animals thoughts:" << std::endl;
-	animals[7]->tell_everything();
-	std::cout << "\nSecond animals thoughts:" << std::endl;
-	*(animals[5]) = *(animals[7]);
-	animals[5]->tell_everything();
-	for (int i = 0; i < NUMBER_OF_ANIMALS; i++)
-		delete animals[i];
 }

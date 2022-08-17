@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 08:44:36 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/11 10:13:30 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/08/17 15:33:55 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,12 @@ std::ostream&	operator<<(std::ostream& o, const FragTrap& claptrap)
 	return (o);
 }
 
-FragTrap::FragTrap(const std::string name)// : ClapTrap(name, 100, 100, 30)
-{	_name = name; _hp = 100; _ep = 100; _dmg = 30; 
+FragTrap::FragTrap(const std::string name) : ClapTrap(name, _defaulthp, _defaultep, _defaultdmg)
+{
 	std::cout << *this << " is here to kick ass!" << std::endl;
-///////////////////////////////////////
-std::cout << "HP: " << _hp << " EP: " << _ep << " DMG: " << _dmg << std::endl;
 }
 
-FragTrap::FragTrap() : ClapTrap("Default FragTrap", 100, 100, 30)
+FragTrap::FragTrap() : ClapTrap("Default FragTrap", _defaulthp, _defaultep, _defaultdmg)
 {
 	std::cout << "FragTrap default constructor" << std::endl;
 }

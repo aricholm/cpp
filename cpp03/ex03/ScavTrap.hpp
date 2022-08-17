@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 07:58:19 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/16 11:32:41 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/08/17 15:33:34 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ private:
 				ScavTrap(const ScavTrap& scavtrap);
 	ScavTrap&	operator= (const ScavTrap& scavtrap);	
 protected:
+	static const int		_defaulthp = 100;
+	static const int		_defaultep = 50;
+	static const int		_defaultdmg = 20;
+	
 				ScavTrap();
 public:
 				ScavTrap(const std::string name);

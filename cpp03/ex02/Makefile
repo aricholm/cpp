@@ -6,11 +6,11 @@
 #    By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/17 11:55:02 by aricholm          #+#    #+#              #
-#    Updated: 2022/04/26 15:07:55 by aricholm         ###   ########.fr        #
+#    Updated: 2022/08/17 15:52:09 by aricholm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	scavtrap
+NAME	=	fragtrap
 SRC		=	main.cpp ClapTrap.cpp FragTrap.cpp
 OBJ		=	$(SRC:%.cpp=%.o)
 

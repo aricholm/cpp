@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 08:41:05 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/16 11:38:08 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/08/17 15:33:24 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,10 @@ private:
 			FragTrap(const FragTrap& fragtrap);
 FragTrap& 	operator = (const FragTrap& ref);
 protected:
+	static const int		_defaulthp = 100;
+	static const int		_defaultep = 100;
+	static const int		_defaultdmg = 30;
+	
 			FragTrap();
 public:
 			FragTrap(const std::string name);
