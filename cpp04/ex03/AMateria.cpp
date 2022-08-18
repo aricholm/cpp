@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 13:58:57 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/18 14:49:18 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/08/18 15:55:00 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ AMateria::AMateria() : _type("notpossible")
 	std::cout << "AMateria default constructor" << std::endl;
 }
 
-AMateria::AMateria( const AMateria & src ) : _type(src.getType())
+AMateria::AMateria( const AMateria & src )
 {
+	*this = src;
 	std::cout << "AMateria copy constructor" << std::endl;
 }
 
@@ -48,11 +49,8 @@ AMateria::~AMateria()
 
 AMateria &				AMateria::operator=( AMateria const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	std::cout << "Copy assignment does nothing" << std::endl;
+	if ( this != &rhs )
+		this->_type = rhs.getType();
 	return *this;
 }
 
@@ -66,7 +64,10 @@ std::ostream &			operator<<( std::ostream & o, AMateria const & i )
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
-
+void	AMateria::use(ICharacter & target)
+{
+	std::cout << "* materia used on " << target.getName() << " *" << std::endl;
+}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------

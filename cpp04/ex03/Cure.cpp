@@ -6,10 +6,14 @@
 
 Cure::Cure() : AMateria("cure")
 {
+	std::cout << "Cure constructor" << std::endl;
 }
 
-Cure::Cure( const Cure & src )
+Cure::Cure( const Cure & src ) : AMateria("cure")
 {
+	*this = src;
+	std::cout << "Cure copy constructor called" << std::endl;
+	return ;
 }
 
 
@@ -19,6 +23,7 @@ Cure::Cure( const Cure & src )
 
 Cure::~Cure()
 {
+	std::cout << "Cure destructor" << std::endl;
 }
 
 
@@ -28,16 +33,16 @@ Cure::~Cure()
 
 Cure &				Cure::operator=( Cure const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	if ( this != &rhs )
+	{
+		this->_type = rhs.getType();
+	}
 	return *this;
 }
 
 std::ostream &			operator<<( std::ostream & o, Cure const & i )
 {
-	//o << "Value = " << i.getValue();
+	(void) i;
 	return o;
 }
 
@@ -47,7 +52,12 @@ std::ostream &			operator<<( std::ostream & o, Cure const & i )
 */
 void	Cure::use(ICharacter& target)
 {
-	std::cout << "* heals " << target << "’s wound" << std::endl;
+	std::cout << "* heals " << target.getName() << "’s wound" << std::endl;
+}
+
+AMateria	*Cure::clone() const
+{
+	return new Cure(*this);
 }
 
 /*

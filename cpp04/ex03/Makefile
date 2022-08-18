@@ -6,12 +6,12 @@
 #    By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/17 11:55:02 by aricholm          #+#    #+#              #
-#    Updated: 2022/05/18 13:58:22 by aricholm         ###   ########.fr        #
+#    Updated: 2022/08/18 17:15:58 by aricholm         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	interface
-SRC		=	main.cpp 
+SRC		=	main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 OBJ		=	$(SRC:%.cpp=%.o)
 
 CC		=	c++

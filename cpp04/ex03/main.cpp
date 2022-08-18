@@ -6,12 +6,16 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 14:19:39 by aricholm          #+#    #+#             */
-/*   Updated: 2022/05/18 14:20:08 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/08/18 17:16:08 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+#include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 #include "ICharacter.hpp"
+#include "Character.hpp"
 
 int main()
 {
@@ -32,11 +36,3 @@ delete me;
 delete src;
 return 0;
 }
-Should output:
-$> clang++ -W -Wall -Werror *.cpp
-$> ./a.out | cat -e
-* shoots an ice bolt at bob *$
-* heals bob's wounds *$
-As usual, implement and turn in more tests than the ones given above.
-You can pass this module without doing exercise 03.
-13

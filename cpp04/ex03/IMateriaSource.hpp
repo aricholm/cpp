@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/18 16:52:51 by aricholm          #+#    #+#             */
-/*   Updated: 2022/08/18 16:54:00 by aricholm         ###   ########.fr       */
+/*   Created: 2022/08/18 13:27:02 by aricholm          #+#    #+#             */
+/*   Updated: 2022/08/18 16:59:37 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CURE_HPP
-# define CURE_HPP
+#ifndef IMATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
 
 # include <iostream>
 # include <string>
-# include "AMateria.hpp"
 
-class Cure : public AMateria
+#include "AMateria.hpp"
+
+class IMateriaSource
 {
 	public:
-							Cure();
-							Cure( Cure const & src );
-		virtual				~Cure();
-
-		Cure &				operator=( Cure const & rhs );
-		virtual void		use(ICharacter& target);
-		virtual AMateria	*clone() const;
-	private:
+		virtual ~IMateriaSource() {}
+		virtual void learnMateria(AMateria*) = 0;
+		virtual AMateria* createMateria(std::string const & type) = 0;
 };
 
-std::ostream &				operator<<( std::ostream & o, Cure const & i );
-
-#endif /* ************************************************************ CURE_H */
+#endif /* IMATERIASOURCE_HPP */
