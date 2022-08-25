@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 15:46:06 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/24 08:35:51 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/08/25 08:59:24 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,9 @@ ClapTrap& ClapTrap::operator= (const ClapTrap& claptrap)
 	_name = claptrap.getName();
 	return *this;
 }
-std::string ClapTrap::getName() const
-{ return _name; }
+
+std::string ClapTrap::getName() const { return _name; }
+
 void	ClapTrap::attack(const std::string& target)
 {
 	if (_hp <= 0)
@@ -54,6 +55,7 @@ void	ClapTrap::attack(const std::string& target)
 	std::cout  << _name << " attacks " << target << ", causing "
 			<< _dmg << " points of damage!" << std::endl;
 }
+
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (_hp <= 0)
@@ -68,6 +70,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	else
 		std::cout  << _name << " died from a " << amount << " dmg attack." << std::endl;
 }
+
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (_hp <= 0)

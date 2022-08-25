@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 15:46:06 by aricholm          #+#    #+#             */
-/*   Updated: 2022/04/24 07:40:24 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/08/25 08:58:34 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,16 @@ ClapTrap::ClapTrap(const std::string name) : _name(name), _hp(10), _ep(10), _dmg
 			<<"but my friends call me "  << _name <<  "!"  << std::endl;
 }
 
-ClapTrap::~ClapTrap( ){	std::cout << _name << " is deconstructed." << std::endl; }
+ClapTrap::~ClapTrap(  {	std::cout << _name << " is deconstructed." << std::endl; }
 
 ClapTrap& ClapTrap::operator= (const ClapTrap& claptrap)
 {
 	_name = claptrap.getName();
 	return *this;
 }
-std::string ClapTrap::getName() const
-{ return _name; }
+
+std::string ClapTrap::getName() const { return _name; }
+
 void	ClapTrap::attack(const std::string& target)
 {
 	if (_hp <= 0)
@@ -48,6 +49,7 @@ void	ClapTrap::attack(const std::string& target)
 	std::cout  << _name << " attacks " << target << ", causing "
 			<< _dmg << " points of damage!" << std::endl;
 }
+
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (_hp <= 0)
@@ -62,6 +64,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	else
 		std::cout  << _name << " died from a " << amount << " dmg attack." << std::endl;
 }
+
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (_hp <= 0)

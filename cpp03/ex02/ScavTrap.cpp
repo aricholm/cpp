@@ -6,7 +6,7 @@
 /*   By: aricholm <aricholm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/24 08:03:45 by aricholm          #+#    #+#             */
-/*   Updated: 2022/08/17 15:50:21 by aricholm         ###   ########.fr       */
+/*   Updated: 2022/08/25 08:59:38 by aricholm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,16 @@ ScavTrap::ScavTrap(const std::string name) : ClapTrap(name, 100, 50, 20)
 }
 
 ScavTrap::ScavTrap() : ClapTrap("Default ScavTrap", 100, 50, 20)
- {
- std::cout << "Default ScavTrap constructor."<< std::endl;
- }
+{
+	std::cout << "Default ScavTrap constructor."<< std::endl;
+}
+
 ScavTrap& ScavTrap::operator= (const ScavTrap& ref)
 {
 	_name = ref.getName();
 	return *this;
 }
+
 ScavTrap::~ScavTrap() { std::cout << *this << " is no more." << std::endl; }
 
 void	ScavTrap::guardGate()
