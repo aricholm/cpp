@@ -106,7 +106,10 @@ void	Character::unequip(int idx)
 void	Character::use(int idx, ICharacter& target)
 {
 	if (!_slot[idx])
+	{
 		std::cout << "No item found" << std::endl;
+		return;
+	}
 	_slot[idx]->use(target);
 	delete _slot[idx];
 	_slot[idx] = NULL;
