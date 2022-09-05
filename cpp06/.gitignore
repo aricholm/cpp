@@ -1,0 +1,4 @@
+*.o
+convert
+serialize
+identify
